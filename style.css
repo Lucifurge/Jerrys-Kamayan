@@ -51,7 +51,7 @@ a:hover {
 
 /* Hero Section */
 #hero {
-  background: linear-gradient(to right, #a5d6a7cc, #81c784cc),
+  background: linear-gradient(to right, #ffffffcc, #ffffffcc),
               url('background.png') no-repeat center center/cover;
   color: #fff;
   text-align: center;
