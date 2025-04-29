@@ -58,6 +58,33 @@ a:hover {
   padding: 100px 30px;
   border-bottom-left-radius: 100px;
   border-bottom-right-radius: 100px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+#hero h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 40px;
+}
+
+#hero .btn-success {
+  background-color: #4CAF50;
+  border-color: #4CAF50;
+  color: white;
+  border-radius: 50px;
+  padding: 12px 30px;
+  transition: 0.3s ease-in-out;
+}
+
+#hero .btn-success:hover {
+  background-color: #2e7d32;
+  border-color: #2e7d32;
+  box-shadow: 0 0 15px #81c784;
 }
 
 /* Buttons */
@@ -198,13 +225,6 @@ footer a:hover {
   .card img {
     height: 200px;
   }
-  #hero {
-  background-image: url('background.jpeg');
-  background-size: cover;
-  background-position: center;
-  color: white;
-}
-
 
   .navbar-brand {
     font-size: 1.5rem;
