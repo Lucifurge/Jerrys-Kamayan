@@ -198,6 +198,13 @@ footer a:hover {
   .card img {
     height: 200px;
   }
+  #hero {
+  background-image: url('background.jpeg');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
 
   .navbar-brand {
     font-size: 1.5rem;
