@@ -1,112 +1,205 @@
-/* Base styles */
+/* Reset and Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ffffff;
-  color: #333;
+  background: linear-gradient(to bottom, #f8fff4, #ffffff);
+  color: #222;
   scroll-behavior: smooth;
 }
 
-h1, h2, h5 {
+/* Typography */
+h1, h2, h3, h5 {
   font-weight: 700;
+  color: #2e7d32;
 }
 
 a {
   text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #66bb6a;
 }
 
 /* Navbar */
 .navbar {
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background-color: #ffffffcc;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
 }
 
 .navbar-brand {
-  font-size: 1.75rem;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #43a047 !important;
+}
+
+.navbar-nav .nav-link {
+  color: #43a047 !important;
+  font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+  color: #2e7d32 !important;
 }
 
 /* Hero Section */
 #hero {
-  background-image: url('hero-bg.jpg');
-  background-size: cover;
-  background-position: center;
+  background: linear-gradient(to right, #a5d6a7cc, #81c784cc),
+              url('hero-bg.jpg') no-repeat center center/cover;
   color: #fff;
-  padding: 80px 0;
-  background-blend-mode: overlay;
-  background-color: rgba(0, 128, 0, 0.5);
+  text-align: center;
+  padding: 100px 30px;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
 }
 
 /* Buttons */
 .btn-success {
   background-color: #4CAF50;
   border-color: #4CAF50;
+  color: white;
+  border-radius: 50px;
+  padding: 10px 24px;
+  transition: 0.3s ease-in-out;
 }
 
-.btn-success:hover,
-.btn-outline-success:hover {
-  background-color: #388E3C;
-  border-color: #388E3C;
-  color: white;
+.btn-success:hover {
+  background-color: #2e7d32;
+  border-color: #2e7d32;
+  box-shadow: 0 0 12px #81c784;
 }
 
 .btn-outline-success {
   color: #4CAF50;
   border-color: #4CAF50;
+  border-radius: 50px;
+  padding: 10px 24px;
 }
 
-/* Card images */
+.btn-outline-success:hover {
+  background-color: #4CAF50;
+  color: white;
+  box-shadow: 0 0 10px #66bb6a;
+}
+
+/* Carousel */
+.carousel-inner img {
+  height: 500px;
+  object-fit: cover;
+  border-radius: 20px;
+}
+
+/* Cards */
+.card {
+  border: none;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  transition: transform .3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
 .card img {
   height: 250px;
   object-fit: cover;
 }
 
-/* Section Headings */
+/* Sections */
+section {
+  padding: 80px 20px;
+}
+
 section h2 {
+  font-size: 2.2rem;
   margin-bottom: 30px;
+  color: #388e3c;
+}
+
+.service-box {
+  background: #f4fff7;
+  border-radius: 25px;
+  padding: 30px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
 }
 
 /* Testimonials */
 blockquote {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   font-style: italic;
-  color: #555;
+  background-color: #f1f8e9;
+  padding: 20px;
+  border-left: 5px solid #66bb6a;
+  border-radius: 8px;
 }
 
 .blockquote-footer {
-  color: #777;
+  color: #666;
+}
+
+/* Modal */
+.modal-content {
+  border-radius: 15px;
+  background: #ffffff;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.1);
 }
 
 /* Footer */
 footer {
-  padding: 40px 0;
-  font-size: 0.9rem;
-  background-color: #f8f9fa;
+  background-color: #e8f5e9;
+  padding: 50px 0;
+  color: #2e7d32;
 }
 
-footer h5 {
-  margin-bottom: 15px;
+footer a {
+  color: #2e7d32;
 }
 
-/* Scroll-to-top button */
-button.position-fixed {
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Scroll to top button */
+.scroll-top-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #43a047;
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
   border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  font-size: 1.2rem;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-  z-index: 1050;
+  font-size: 1.4rem;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  transition: background-color 0.3s ease;
 }
 
-/* Carousel height fix */
-.carousel-inner img {
-  max-height: 500px;
-  object-fit: cover;
+.scroll-top-btn:hover {
+  background-color: #2e7d32;
 }
 
-/* Responsive tweaks */
+/* Responsive Design */
 @media (max-width: 768px) {
+  #hero {
+    padding: 60px 20px;
+    border-radius: 0;
+  }
+
   .card img {
     height: 200px;
   }
-  #hero {
-    padding: 60px 20px;
+
+  .navbar-brand {
+    font-size: 1.5rem;
   }
 }
